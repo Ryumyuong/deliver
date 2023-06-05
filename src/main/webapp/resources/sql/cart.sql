@@ -1,0 +1,2 @@
+create table cart(s_id varchar2(10), p_id varchar2(10), s_name varchar2(30), s_unitprice number(30,0));
+select c.s_id, c.p_id, c.s_name, c.s_unitprice, count(c.s_id) as sum, count(c.s_id)*c.s_unitprice as total from cart c group by c.s_id, c.p_id, c.s_name, c.s_unitprice
